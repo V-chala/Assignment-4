@@ -1,0 +1,29 @@
+// Using an anonymous function with IIFE
+
+(function(arr) {
+    let removeDuplicates = function(array) {
+        return array.filter((item, index) => array.indexOf(item) === index);
+    };
+
+    let uniqueArray = removeDuplicates(arr);
+    console.log("Array after removing duplicates:", uniqueArray);
+})([1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 9, 9]);
+
+// Output:
+
+// Array after removing duplicates: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+# Explanation: 
+
+//IIFE (Immediately Invoked Function Expression):
+
+//(function(arr) { ... })([1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 9, 9]); defines and immediately invokes the function, passing the array as an argument.
+
+//Anonymous Function:
+
+//An anonymous function removeDuplicates is defined inside the IIFE to remove duplicates from the array.
+//The filter method is used with an anonymous function as a callback to create a new array containing only unique elements. 
+//The callback function checks if the current element's index matches its first occurrence in the array using array.indexOf(item) === index.
+
