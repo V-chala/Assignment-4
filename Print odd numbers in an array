@@ -1,0 +1,21 @@
+// Define an array of numbers
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Use the filter method on the array to create a new array containing only the odd numbers
+const oddNumbers = numbers.filter(num => num % 2 !== 0);
+
+// Print the odd numbers
+
+console.log("Odd numbers:", oddNumbers);
+
+
+
+
+
+// # Explanation:
+
+// We start by defining an array called numbers that contains some integers.
+// We use the filter method on the numbers array. The filter method creates a new array containing only the elements that pass the test implemented by the provided function.
+// Inside the filter method, we use an arrow function num => num % 2 !== 0 as the test function. This arrow function checks if a number is odd by using the modulo operator (%) to check if the number divided by 2 leaves a remainder (num % 2 !== 0). If the remainder is not 0, then the number is odd and will be included in the new array.
+// The filter method returns a new array containing only the odd numbers, which we store in the oddNumbers variable.
+// Finally, we use console.log to print the array of odd numbers to the console.
