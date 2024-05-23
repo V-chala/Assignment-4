@@ -18,14 +18,14 @@
 // Median of the two sorted arrays: 3.5
 
 
-# Explanation:
+// # Explanation:
 
-IIFE (Immediately Invoked Function Expression):
+// IIFE (Immediately Invoked Function Expression):
 
-(function(arr1, arr2) { ... })([1, 3, 5], [2, 4, 6]); defines and immediately invokes the function, passing two sorted arrays as arguments.
+// (function(arr1, arr2) { ... })([1, 3, 5], [2, 4, 6]); defines and immediately invokes the function, passing two sorted arrays as arguments.
 
-Anonymous Function:
+// Anonymous Function:
 
-An anonymous function findMedian is defined inside the IIFE to calculate the median of the two sorted arrays.
-array1.concat(array2).sort((a, b) => a - b) merges the two arrays and sorts the resulting array.
-The median is calculated by checking if the merged array length is even or odd. If even, the median is the average of the two middle elements; if odd, it's the middle element.
+// An anonymous function findMedian is defined inside the IIFE to calculate the median of the two sorted arrays.
+// array1.concat(array2).sort((a, b) => a - b) merges the two arrays and sorts the resulting array.
+// The median is calculated by checking if the merged array length is even or odd. If even, the median is the average of the two middle elements; if odd, it's the middle element.
