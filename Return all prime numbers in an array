@@ -1,0 +1,35 @@
+// Using an anonymous function with IIFE
+
+(function(arr) {
+    let isPrime = function(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    };
+
+    let primeNumbers = arr.filter(function(num) {
+        return isPrime(num);
+    });
+
+    console.log("Prime numbers using anonymous function and IIFE:", primeNumbers);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+
+// Output:
+
+// Prime numbers using anonymous function and IIFE: [2, 3, 5, 7, 11, 13, 17, 19]
+
+
+
+# Explanation: 
+
+IIFE (Immediately Invoked Function Expression):
+
+(function(arr) { ... })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]); defines and immediately invokes the function, passing the array as an argument.
+
+Anonymous Function:
+
+An anonymous function isPrime is defined inside the IIFE to check if a number is prime.
+arr.filter(function(num) { ... }) uses an anonymous function as a callback to the filter method to select prime numbers from the array.
+The filter method creates a new array containing all elements that pass the test implemented by the isPrime function.
