@@ -1,0 +1,31 @@
+// Using an anonymous function with IIFE
+
+(function(arr, k) {
+    let rotateArray = function(array, rotations) {
+        let length = array.length;
+        rotations = rotations % length; // Handle cases where k > length of array
+        return array.slice(-rotations).concat(array.slice(0, -rotations));
+    };
+
+    let rotatedArray = rotateArray(arr, k);
+    console.log("Array after rotating by", k, "times:", rotatedArray);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9], 3);
+
+// Output:
+
+// Array after rotating by 3 times: [7, 8, 9, 1, 2, 3, 4, 5, 6]
+
+
+
+// # Explanation:
+
+
+// IIFE (Immediately Invoked Function Expression):
+
+// (function(arr, k) { ... })([1, 2, 3, 4, 5, 6, 7, 8, 9], 3); defines and immediately invokes the function, passing the array and the number of rotations (k) as arguments.
+
+// Anonymous Function:
+
+// An anonymous function rotateArray is defined inside the IIFE to perform the array rotation.
+// rotations = rotations % length ensures that if k is greater than the length of the array, it only rotates the necessary number of times.
+// array.slice(-rotations).concat(array.slice(0, -rotations)) slices the array into two parts and concatenates them in the rotated order.
