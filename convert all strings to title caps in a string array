@@ -1,0 +1,26 @@
+// Using an anonymous function with IIFE
+
+(function(arr) {
+    let titleCapsArray = arr.map(function(str) {
+        return str.toLowerCase().split(' ').map(function(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }).join(' ');
+    });
+    console.log("Title Caps using anonymous function and IIFE:", titleCapsArray);
+})(["hello world", "javascript is awesome", "iife and anonymous functions"]);
+
+// Output:
+// Title Caps using anonymous function and IIFE: ["Hello World", "Javascript Is Awesome", "Iife And Anonymous Functions"]
+
+
+
+Explanation: 
+
+# IIFE (Immediately Invoked Function Expression):
+
+(function(arr) { ... })(["hello world", "javascript is awesome", "iife and anonymous functions"]); defines and immediately invokes the function, passing the array as an argument.
+  
+# Anonymous Function:
+
+Inside the IIFE, arr.map(function(str) { ... }) uses an anonymous function as a callback to the map method to transform each string in the array.
+The function converts the string to lowercase, splits it into words, capitalizes the first letter of each word, and then joins the words back together.
