@@ -24,12 +24,12 @@
 
 # Explanation: 
 
-IIFE (Immediately Invoked Function Expression):
+//IIFE (Immediately Invoked Function Expression):
 
-(function(arr) { ... })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]); defines and immediately invokes the function, passing the array as an argument.
+//(function(arr) { ... })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]); defines and immediately invokes the function, passing the array as an argument.
 
-Anonymous Function:
+//Anonymous Function:
 
-An anonymous function isPrime is defined inside the IIFE to check if a number is prime.
-arr.filter(function(num) { ... }) uses an anonymous function as a callback to the filter method to select prime numbers from the array.
-The filter method creates a new array containing all elements that pass the test implemented by the isPrime function.
+//An anonymous function isPrime is defined inside the IIFE to check if a number is prime.
+//arr.filter(function(num) { ... }) uses an anonymous function as a callback to the filter method to select prime numbers from the array.
+//The filter method creates a new array containing all elements that pass the test implemented by the isPrime function.
