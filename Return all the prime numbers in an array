@@ -1,0 +1,41 @@
+// Array of numbers
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Function to check if a number is prime
+const isPrime = num => {
+    if (num <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+};
+
+// Use filter method with arrow function to get prime numbers
+const primeNumbers = numbers.filter(isPrime);
+
+// Print prime numbers
+console.log("Prime numbers:", primeNumbers);
+
+
+
+// Output:
+
+Prime numbers: [2, 3, 5, 7]
+
+
+
+
+// Explantion:
+
+//  start by defining an array called numbers that contains some integers.
+//  define an arrow function isPrime that takes a number as input and returns true if the number is prime and false otherwise. Inside this function:
+//  first check if the number is less than or equal to 1, in which case it is not prime and we return false.
+//  then loop from 2 to the square root of the number (Math.sqrt(num)) and check if the number is divisible by any of these values. If it is, then the number is not prime and we return false.
+//  the loop completes without finding a divisor, then the number is prime and we return true.
+//  use the filter method on the numbers array to create a new array containing only the prime numbers. The filter method applies the isPrime function to each element in the array and includes the element in the new array if the function returns true.
+// The filter method returns a new array containing all the prime numbers, which we store in the primeNumbers variable.
+ // inally, we use console.log to print the array of prime numbers to the console.
