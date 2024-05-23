@@ -1,0 +1,23 @@
+// Array of numbers
+const numbers = [1, 2, 3, 4, 5];
+
+// Use reduce method with arrow function to calculate sum
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+
+// Print the sum
+console.log("Sum of numbers:", sum);
+
+
+// Output:
+Sum of numbers: 15
+
+
+
+// Explanation:
+
+// We start by defining an array called numbers that contains some integers.
+// We use the reduce method on the numbers array to calculate the sum of all numbers. The reduce method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+// Inside the reduce method, we use an arrow function (acc, num) => acc + num. This function takes two parameters: acc (the accumulator, which stores the intermediate result of the sum) and num (the current number in the array being processed). It returns the sum of the accumulator and the current number.
+// We provide an initial value of 0 for the accumulator as the second argument to reduce.
+// The reduce method returns the final sum of all numbers, which we store in the sum variable.
+// Finally, we use console.log to print the sum of all numbers in the array to the console.
