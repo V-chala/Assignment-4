@@ -1,0 +1,31 @@
+// Array of strings
+const strings = ["hello", "level", "radar", "world", "civic"];
+
+// Function to check if a string is palindrome
+const isPalindrome = str => str === str.split("").reverse().join("");
+
+// Use filter method with arrow function to get palindromes
+const palindromes = strings.filter(isPalindrome);
+
+// Print palindromes
+console.log("Palindromes:", palindromes);
+
+
+
+
+// Output:
+Palindromes: ["level", "radar", "civic"]
+
+
+
+
+// Explantion:
+
+ // start by defining an array called strings that contains some strings.
+ // define an arrow function isPalindrome that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards) and false otherwise. Inside this function:
+// use the split method to split the string into an array of characters, the reverse method to reverse the array, and the join method to join the reversed array back into a string.
+// then compare this reversed string with the original string. If they are the same, then the string is a palindrome and we return true, otherwise we return false.
+// use the filter method on the strings array to create a new array containing only the palindromes. The filter method applies the isPalindrome function to each element in the array and includes the element in the new array if the function returns true.
+// filter method returns a new array containing all the palindromes, which we store in the palindromes variable.
+// Finally, we use console.log to print the array of palindromes to the console.
+
