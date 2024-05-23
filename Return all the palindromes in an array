@@ -1,0 +1,31 @@
+// Using an anonymous function with IIFE
+
+(function(arr) {
+    let isPalindrome = function(str) {
+        str = str.toString();
+        return str === str.split('').reverse().join('');
+    };
+
+    let palindromes = arr.filter(function(str) {
+        return isPalindrome(str);
+    });
+
+    console.log("Palindromes using anonymous function and IIFE:", palindromes);
+})(["madam", "racecar", "hello", "world", "level", "noon", "javascript"]);
+
+// Output:
+// Palindromes using anonymous function and IIFE: ["madam", "racecar", "level", "noon"]
+
+
+
+# Explanation:
+
+IIFE (Immediately Invoked Function Expression):
+
+(function(arr) { ... })(["madam", "racecar", "hello", "world", "level", "noon", "javascript"]); defines and immediately invokes the function, passing the array as an argument.
+
+Anonymous Function:
+
+An anonymous function isPalindrome is defined inside the IIFE to check if a string is a palindrome.
+arr.filter(function(str) { ... }) uses an anonymous function as a callback to the filter method to select palindromes from the array.
+The filter method creates a new array containing all elements that pass the test implemented by the isPalindrome function.
